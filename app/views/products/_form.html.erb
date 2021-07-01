@@ -1,0 +1,92 @@
+<div class="form-title">
+    <div class="row">
+        <div class="col-sm-6">
+            <h1><%= name %> <b>Product</b></h1>
+        </div>
+    </div>
+</div>
+
+<%= form_for(@product, remote: true, class:"needs-validation") do |f| %>
+    <% if @product.category_id != nil %>
+    <% category_name = @product.category.name %>
+    <% elsif %>
+    <% category_name = "" %>
+    <% end %>
+
+    <% @product.errors.full_messages.each do |message| %>
+        <div class="be-red white">
+            *<%= message %>
+        </div>
+    <%end%>
+
+    <div class="form-group row">
+        <div class="col-md-4">
+            <%= f.label "Name", class:"control-label" %>
+            <%= f.text_field :name, autofocus: true, class:"form-control", required: "required" %>
+        </div>
+
+        <div class="col-md-4">
+            <%= f.label "Category", class:"control-label" %>
+            <%#= f.text_field :category_name, data: {autocomplete_source: Category.order(:name).map(&:name)}, class:"form-control", required: "required" %>
+            <%#= f.text_field :category_id, type: "hidden" %>
+            <% if @product.category_id != nil %>
+            <%= f.text_field :category_id, type: "hidden" %>
+            <%= f.text_field :category_id, value: "#{category_name}", id: "category_name", name: "category_name", class:"form-control", required: "required" %>
+            <% elsif %>
+            <%= f.text_field :category_id, class:"form-control", required: "required" %>
+            <% end %>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <div class="col-md-4">
+            <%= f.label "Color", class:"control-label" %>
+            <%= f.text_field :color, class:"form-control", required: "required" %>
+        </div>
+
+        <div class="col-md-2">
+            <%= f.label "Size", class:"control-label" %>
+            <%= f.text_field :size, class:"form-control", required: "required" %>
+        </div>
+
+        <div class="col-md-2">
+            <%= f.label "Price", class:"control-label" %>
+            <%= f.text_field :price, class:"form-control", required: "required" %>
+        </div>
+    </div>
+
+    <% if @stores.count > 0 %>
+    <div class="form-group row">
+        <label>Stores</label>
+        <div class="container border bg-light">
+            <div class="form-group row">
+                <% @stores.each do |store| %>
+                <div class="col-md-4 p-2">
+                    <% if @store_product != nil %>
+                        <% store_checked = "false" %>
+                        <% @store_product.each do |sp| %>
+                            <% if store.id == sp.store_id %>
+                                <% store_checked = "true" %>
+                            <% end %>
+                        <% end %>
+
+                        <% if store_checked == "true" %>
+                            <%= check_box_tag "stores[]", store.id, checked: true %> <%= store.name %>
+                        <% elsif %>
+                            <%= check_box_tag "stores[]", store.id %> <%= store.name %>
+                        <% end %>
+                    <% elsif %>
+                        <%= check_box_tag "stores[]", store.id %> <%= store.name %>
+                    <% end %>
+                </div>
+                <% end %>
+            </div>
+        </div>
+    </div>
+    <% end %>
+
+    <div class="padding_top25">
+        <%= f.submit "Save", class:"btn btn-success" %>
+        <%= link_to "Back", products_path, class:"btn btn-outline-primary" %>
+    </div>
+<%end%>
