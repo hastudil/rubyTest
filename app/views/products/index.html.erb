@@ -1,0 +1,47 @@
+<div class="container-xl">
+    <div class="table-responsive">
+        <div class="table-wrapper">
+            <%= render "partials/table_title", entity_label: "Products", button_label: "Product" %>
+            
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Category</th>
+                        <th scope="col">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <% @products.each do |product| %>
+                    <tr>
+                        <td>
+                            <%= product.name %>
+                        </td>
+                        <td>
+                            <%= product.category.name %>
+                        </td>
+                        <td>
+                            <%#= link_to 'Show', product, class:"btn btn-success" %>
+                            <%= link_to edit_product_path(product), class:"btn btn-success" do %>
+                                <%# <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen-fill" viewBox="0 0 16 16">
+                                    <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001z"/>
+                                </svg> %>
+                                Edit
+                            <% end %>
+                            <%= link_to product, method: :delete, class: "btn btn-outline-danger", remote: true, data: { confirm: 'Are you sure you want to delete this product?' } do %>
+                                <%# <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash-circle" viewBox="0 0 16 16">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                    <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+                                </svg> %>
+                                Delete
+                            <% end %>
+                            <%#= link_to "Edit", edit_product_path(product), class:"btn btn-success" %>
+                            <%#= link_to "Delete", product, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-success" %>
+                        </td>
+                    </tr>
+                <%end%>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

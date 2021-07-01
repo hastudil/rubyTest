@@ -1,0 +1,32 @@
+<!--<div class="form-title">
+    <div class="row">
+        <div class="col-sm-6">
+            <h1><%#= name %> <b>Keyword</b></h1>
+        </div>
+    </div>
+</div>-->
+
+<%= form_for([@category,@keyword], remote: true, html: {id: "keywords-form"}) do |f| %>
+  <% if @keyword.errors.any? %>
+    <div id="error_explanation">
+      <ul>
+        <% @keyword.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group row">
+    <div class="col-md-2">
+      <%#= f.label "Name" %>
+      <%= f.text_field :name, autofocus: true, placeholder: "Name", class:"form-control" %>
+    </div>
+
+    <div class="col-md-2">
+      <%= f.submit "New Keyword", class:"btn btn-success" %>
+    </div>
+  </div>
+  
+  <%#= link_to "Back", keywords_path, class:"btn btn-outline-primary" %>
+<% end %>
