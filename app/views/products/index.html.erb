@@ -18,7 +18,9 @@
                             <%= product.name %>
                         </td>
                         <td>
+                            <% if product.category != nil %>
                             <%= product.category.name %>
+                            <% end %>
                         </td>
                         <td>
                             <%#= link_to 'Show', product, class:"btn btn-success" %>
