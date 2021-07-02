@@ -5,20 +5,18 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
-
-* System dependencies
+* Ruby version: ruby 2.7.3p183
+* Rails versio: Rails 6.1.4
 
 * Configuration
-
-* Database creation
+  In the console, execute the following commands, in the order indicated:
+  
+  - For dependencies:
+    bundle install
+    
+  - Database creation
+    rake db:create
+    rake db:migrate
 
 * Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+  In the start.sql file you will find the INSERT statements for each of the entities.
