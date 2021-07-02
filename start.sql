@@ -18,23 +18,22 @@ INSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ('Ropa','20
 INSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ('Bisutería','2021-06-30 16:35:37.339686','2021-06-30 16:35:37.339686');
 INSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ('Zapatos Deportivos 1','2021-06-30 02:24:43.886702','2021-07-01 07:47:50.787371');
 INSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ('Accesorios','2021-07-01 07:48:23.292083','2021-07-01 07:48:23.292083');
-INSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ('Playera','2021-07-01 07:48:51.396495','2021-07-01 07:48:51.396495');
+INSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ('Temporada Playera','2021-07-01 07:48:51.396495','2021-07-01 07:48:51.396495');
+INSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ('Instrumentos Musicales','2021-07-01 07:48:51.396495','2021-07-01 07:48:51.396495');
 
 #KEYWORDS
 INSERT INTO "keywords" ("name", "created_at", "updated_at", "category_id") VALUES ('Correr','2021-06-30 02:24:57.624448','2021-06-30 02:24:57.624448',4);
 INSERT INTO "keywords" ("name", "created_at", "updated_at", "category_id") VALUES ('Gym','2021-06-30 02:25:17.396366','2021-06-30 02:25:17.396366',4);
 INSERT INTO "keywords" ("name", "created_at", "updated_at", "category_id") VALUES ('Marathon','2021-06-30 02:25:53.066785','2021-06-30 02:25:53.066785',4);
-INSERT INTO "keywords" ("name", "created_at", "updated_at", "category_id") VALUES ('Plata','2021-06-30 16:55:17.361029','2021-06-30 16:55:17.361029',7);
-INSERT INTO "keywords" ("name", "created_at", "updated_at", "category_id") VALUES ('Delicada','2021-07-01 01:49:28.130781','2021-07-01 01:49:28.130781',3);
+INSERT INTO "keywords" ("name", "created_at", "updated_at", "category_id") VALUES ('Plata','2021-06-30 16:55:17.361029','2021-06-30 16:55:17.361029',3);
+INSERT INTO "keywords" ("name", "created_at", "updated_at", "category_id") VALUES ('Delicada','2021-07-01 01:49:28.130781','2021-07-01 01:49:28.130781',1);
 INSERT INTO "keywords" ("name", "created_at", "updated_at", "category_id") VALUES ('Deporte','2021-07-01 04:47:30.18533','2021-07-01 04:47:30.18533',4);
-INSERT INTO "keywords" ("name", "created_at", "updated_at", "category_id") VALUES ('Sol','2021-07-01 07:49:03.83512','2021-07-01 07:49:03.83512',9);
-INSERT INTO "keywords" ("name", "created_at", "updated_at", "category_id") VALUES ('Arena','2021-07-01 07:49:08.275518','2021-07-01 07:49:08.275518',9);
-INSERT INTO "keywords" ("name", "created_at", "updated_at", "category_id") VALUES ('Mar','2021-07-01 07:49:11.61671','2021-07-01 07:49:11.61671',9);
-INSERT INTO "keywords" ("name", "created_at", "updated_at", "category_id") VALUES ('Pulsera','2021-07-01 10:04:42.106629','2021-07-01 10:04:42.106629',7);
-INSERT INTO "keywords" ("name", "created_at", "updated_at", "category_id") VALUES ('Cadena','2021-07-01 10:04:55.966193','2021-07-01 10:04:55.966193',7);
-INSERT INTO "keywords" ("name", "created_at", "updated_at", "category_id") VALUES ('Sonido','2021-07-01 17:17:47.937719','2021-07-01 17:17:47.937719',10);
-INSERT INTO "keywords" ("name", "created_at", "updated_at", "category_id") VALUES ('Lira','2021-07-01 17:18:55.682134','2021-07-01 17:18:55.682134',10);
-INSERT INTO "keywords" ("name", "created_at", "updated_at", "category_id") VALUES ('Batería','2021-07-01 17:19:01.020782','2021-07-01 17:19:01.020782',10);
-INSERT INTO "keywords" ("name", "created_at", "updated_at", "category_id") VALUES ('Guitarra','2021-07-01 17:19:07.369908','2021-07-01 17:19:07.369908',10);
-INSERT INTO "keywords" ("name", "created_at", "updated_at", "category_id") VALUES ('Chelo','2021-07-01 17:19:11.999351','2021-07-01 17:19:11.999351',10);
-INSERT INTO "keywords" ("name", "created_at", "updated_at", "category_id") VALUES ('Piano','2021-07-01 17:19:21.335508','2021-07-01 17:19:21.335508',10);
+INSERT INTO "keywords" ("name", "created_at", "updated_at", "category_id") VALUES ('Sol','2021-07-01 07:49:03.83512','2021-07-01 07:49:03.83512',6);
+INSERT INTO "keywords" ("name", "created_at", "updated_at", "category_id") VALUES ('Arena','2021-07-01 07:49:08.275518','2021-07-01 07:49:08.275518',6);
+INSERT INTO "keywords" ("name", "created_at", "updated_at", "category_id") VALUES ('Mar','2021-07-01 07:49:11.61671','2021-07-01 07:49:11.61671',6);
+INSERT INTO "keywords" ("name", "created_at", "updated_at", "category_id") VALUES ('Sonido','2021-07-01 17:17:47.937719','2021-07-01 17:17:47.937719',7);
+INSERT INTO "keywords" ("name", "created_at", "updated_at", "category_id") VALUES ('Lira','2021-07-01 17:18:55.682134','2021-07-01 17:18:55.682134',7);
+INSERT INTO "keywords" ("name", "created_at", "updated_at", "category_id") VALUES ('Batería','2021-07-01 17:19:01.020782','2021-07-01 17:19:01.020782',7);
+INSERT INTO "keywords" ("name", "created_at", "updated_at", "category_id") VALUES ('Guitarra','2021-07-01 17:19:07.369908','2021-07-01 17:19:07.369908',7);
+INSERT INTO "keywords" ("name", "created_at", "updated_at", "category_id") VALUES ('Chelo','2021-07-01 17:19:11.999351','2021-07-01 17:19:11.999351',7);
+INSERT INTO "keywords" ("name", "created_at", "updated_at", "category_id") VALUES ('Piano','2021-07-01 17:19:21.335508','2021-07-01 17:19:21.335508',7);
